@@ -1,6 +1,6 @@
 const GHPATH = 'https://dahliabloom.github.io/habito/';
 const APP_PREFIX = 'habito';
-const VERSION = '0.1';
+const VERSION = 'v0.1';
 const URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`
