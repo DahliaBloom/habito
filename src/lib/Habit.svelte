@@ -26,7 +26,10 @@
     }
 </script>
 
-<button class="bg-neutral rounded-lg p-2" on:click={() => (isOpenHabitMenue = true)}>
+<button
+    class="bg-neutral rounded-lg p-2"
+    on:click={() => (isOpenHabitMenue = true)}
+>
     <div class="mb-2 flex justify-between">
         <h1 class="font-bold text-base sm:text-xl">{habit.name}</h1>
 
@@ -56,5 +59,11 @@
 </button>
 
 {#if isOpenHabitMenue}
-    <HabitMenue {habit} />
+    <HabitMenue
+        {habit}
+        on:close={() => {
+            isOpenHabitMenue = false;
+            habits.update((v) => v.filter((obj) => obj.name !== habit.name));
+        }}
+    />
 {/if}

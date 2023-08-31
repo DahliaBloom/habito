@@ -16,7 +16,7 @@
     });
 
     function del() {
-        habits.update((v) => v.filter((obj) => obj.name !== habit.name));
+        dispatch("close");
     }
 </script>
 
