@@ -1,7 +1,7 @@
 {
     "name": "habito",
     "short_name": "habito",
-    "scope": "/",
+    "scope": "/habito/",
     "start_url": ".",
     "icons": [
         {
