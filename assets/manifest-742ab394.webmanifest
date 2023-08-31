@@ -2,7 +2,7 @@
     "name": "habito",
     "short_name": "habito",
     "scope": "/habito/",
-    "start_url": "/habito/",
+    "start_url": ".",
     "icons": [
         {
             "src": "habito/apple-touch-icon.png",
