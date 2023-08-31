@@ -16,7 +16,7 @@
     });
 
     function del() {
-        dispatch("close");
+        dispatch("delete");
     }
 </script>
 

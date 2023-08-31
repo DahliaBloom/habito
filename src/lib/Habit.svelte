@@ -61,7 +61,8 @@
 {#if isOpenHabitMenue}
     <HabitMenue
         {habit}
-        on:close={() => {
+        on:close={() => (isOpenHabitMenue = false)}
+        on:delete={() => {
             isOpenHabitMenue = false;
             habits.update((v) => v.filter((obj) => obj.name !== habit.name));
         }}
