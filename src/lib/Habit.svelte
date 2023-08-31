@@ -3,10 +3,12 @@
     import { Check } from "lucide-svelte";
     import { habits } from "../utils/localStore";
     import { Confetti } from "svelte-confetti";
+    import HabitMenue from "./HabitMenue.svelte";
 
     export let habit;
 
     let playConfetti = false;
+    let isOpenHabitMenue = false;
 
     $: isCheckedForToday =
         habit.checkedDays.length !== 0 &&
@@ -24,7 +26,7 @@
     }
 </script>
 
-<div class="bg-neutral rounded-lg p-2">
+<button class="bg-neutral rounded-lg p-2" on:click={() => (isOpenHabitMenue = true)}>
     <div class="mb-2 flex justify-between">
         <h1 class="font-bold text-base sm:text-xl">{habit.name}</h1>
 
@@ -51,4 +53,8 @@
         </div>
     </div>
     <HeatMap {habit} />
-</div>
+</button>
+
+{#if isOpenHabitMenue}
+    <HabitMenue {habit} />
+{/if}
