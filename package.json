@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp service-worker.js manifest.webmanifest ./dist",
+    "build": "vite build && cp service-worker.js ./dist",
     "preview": "vite preview"
   },
   "devDependencies": {
